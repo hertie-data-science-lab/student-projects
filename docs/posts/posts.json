@@ -1,0 +1,18 @@
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to Hertie Data Science Lab Student Projects",
+    "description": "Welcome to our new blog, Hertie Data Science Lab Student Projects. We hope you enjoy \nreading what we have to say!",
+    "author": [
+      {
+        "name": "Nora Jones",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2020-07-22",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-07-22T16:35:25+02:00",
+    "input_file": {}
+  }
+]

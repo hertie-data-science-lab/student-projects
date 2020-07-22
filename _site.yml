@@ -1,0 +1,12 @@
+name: "student-projects"
+title: "Hertie Data Science Lab Student Projects"
+description: |
+  Hertie Data Science Lab Student Projects
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
