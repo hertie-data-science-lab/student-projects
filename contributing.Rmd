@@ -21,7 +21,7 @@ contribute a new article are as follows:
     into the GitHub repository (be sure to check in the the Rmd source code and
     the generated HTML files). 
 
-3.  Be sure that you've included all required [article metadata](#). We also encourage you to 
+3.  Be sure that you've included all required [article metadata](#). 
 
 4.  [Post an issue](https://github.com/rstudio/tensorflow-blog/issues) on the
     Data Science Student Projects GitHub repo requesting that we accept your article (be sure
@@ -36,28 +36,25 @@ fields. Here's an example of a post that includes all required metadata:
 
 ``` {.markup}
 ---
-title: "Classifying physical activity from smartphone data with Keras"
+title: "Some Interesting Title Here"
 description: |
-  Using Keras to train a convolutional neural network to classify physical
-  activity. The dataset was built from the recordings of 30 subjects 
-  performing basic activities and postural transitions while carrying a 
-  waist-mounted smartphone with embedded inertial sensors.
+  Using some fancy deep learning method to do something
+  vaguely interesting that is at least tangentially related 
+  to politics/computational social science. 
 author:
   - name: Allison Koh 
-    url: http://website.here
-    affiliation: Hertie School 
-    affiliation_url: https://www.hertie-school.org/en/datasciencelab
-date: 07-17-2018
+date: 07-17-2020
+categories: 
+  - Natural Language Processing
+  - Machine Learning
 creative_commons: CC BY
-repository_url: https://github.com/allisonkoh/example-repo-here
+repository_url: https://github.com/allisonkoh/project-repo
 output: 
   distill::distill_article:
     self_contained: false
 ---
 ```
 
-Note that the `author` field includes a URL for the author as well as their
-affiliation (you can include multiple authors). Note also the `creative_commons`
-field which marks the article as being share-able (all contributed posts must
-have a [Creative Commons](https://creativecommons.org/) license). Finally, the
+Note that the `creative_commons` field which marks the article as being 
+share-able (all contributed posts must have a [Creative Commons](https://creativecommons.org/) license). Note also the
 `repository_url` is used to provide links from the article back to GitHub.

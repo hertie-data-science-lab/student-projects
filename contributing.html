@@ -19,20 +19,20 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Hertie Data Science Lab Student Projects: Contributing articles</title>
+  <title>Data Science Student Projects: Contributing articles</title>
   
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Hertie Data Science Lab Student Projects: Contributing articles"/>
+  <meta property="og:title" content="Data Science Student Projects: Contributing articles"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Hertie Data Science Lab Student Projects"/>
+  <meta property="og:site_name" content="Data Science Student Projects"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Hertie Data Science Lab Student Projects: Contributing articles"/>
+  <meta property="twitter:title" content="Data Science Student Projects: Contributing articles"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
@@ -1287,12 +1287,18 @@
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">Hertie Data Science Lab Student Projects</a>
+<span class="logo">
+<img src="images/HertieSchool.png"/>
+</span>
+<a href="index.html" class="title">Data Science Student Projects</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="contributing.html">Contributing</a>
+<a href="https://github.com/hertie-data-science-lab/student-projects">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1321,25 +1327,24 @@
 <p>To be included in the blog, your article should include some standard metadata fields. Here’s an example of a post that includes all required metadata:</p>
 <pre class="markup"><code>
 ---
-title: &quot;Classifying physical activity from smartphone data with Keras&quot;
+title: &quot;Some Interesting Title Here&quot;
 description: |
-  Using Keras to train a convolutional neural network to classify physical
-  activity. The dataset was built from the recordings of 30 subjects 
-  performing basic activities and postural transitions while carrying a 
-  waist-mounted smartphone with embedded inertial sensors.
+  Using some fancy deep learning method to do something
+  vaguely interesting that is at least tangentially related 
+  to politics/computational social science. 
 author:
   - name: Allison Koh 
-    url: http://website.here
-    affiliation: Hertie School 
-    affiliation_url: https://www.hertie-school.org/en/datasciencelab
-date: 07-17-2018
+date: 07-17-2020
+categories: 
+  - Natural Language Processing
+  - Machine Learning
 creative_commons: CC BY
-repository_url: https://github.com/allisonkoh/example-repo-here
+repository_url: https://github.com/allisonkoh/project-repo
 output: 
   distill::distill_article:
     self_contained: false
 ---</code></pre>
-<p>Note that the <code>author</code> field includes a URL for the author as well as their affiliation (you can include multiple authors). Note also the <code>creative_commons</code> field which marks the article as being share-able (all contributed posts must have a <a href="https://creativecommons.org/">Creative Commons</a> license). Finally, the <code>repository_url</code> is used to provide links from the article back to GitHub.</p>
+<p>Note that the <code>creative_commons</code> field which marks the article as being share-able (all contributed posts must have a <a href="https://creativecommons.org/">Creative Commons</a> license). Note also the <code>repository_url</code> is used to provide links from the article back to GitHub.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
