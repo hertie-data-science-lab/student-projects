@@ -23,7 +23,7 @@ contribute a new article are as follows:
 
 3.  Be sure that you've included all required [article metadata](#). 
 
-4.  [Post an issue](https://github.com/rstudio/tensorflow-blog/issues) on the
+4.  [Post an issue](https://github.com/hertie-data-science-lab/student-projects) on the
     Data Science Student Projects GitHub repo requesting that we accept your article (be sure
     to include a link back to your article's GitHub repo!).
 
