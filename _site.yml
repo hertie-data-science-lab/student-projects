@@ -1,9 +1,9 @@
 name: "student-projects"
-title: "Data Science Student Projects"
+title: "Student Projects"
 description: |
 output_dir: "."
 navbar:
-  logo: images/HertieSchool.png
+  logo: images/HertieSchool_DSL_RGB.svg
   right:
     - text: "Home"
       href: index.html

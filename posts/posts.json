@@ -1,42 +1,27 @@
 [
   {
     "path": "posts/2020-07-22-bertcnn/",
-    "title": "Predicting Policy Preferences from Party Manifestos with BERT and Convolutional Neural Networks",
-    "description": "In this post, we present a deep learning approach to classifying labeled texts and phrases in party manifestos, using the coding scheme and documents from Manifesto Project.",
+    "title": "Predicting Policy Preferences with BERT and Convolutional Neural Networks",
+    "description": "We present a deep learning approach to classifying labeled texts and phrases in party manifestos, using the coding scheme and documents from the Manifesto Project Corpus.",
     "author": [
       {
-        "name": "Allison Wun-hui Koh",
-        "url": {}
+        "name": "Allison Koh",
+        "url": "http://allisonkoh.github.io"
       },
       {
         "name": "Daniel Kai Sheng Boey",
         "url": {}
-      },
-      {
-        "name": "Hannah Bechara",
-        "url": {}
       }
     ],
     "date": "2020-07-23",
-    "categories": [],
-    "preview": "posts/2020-07-22-bertcnn/figures/desc-country.png",
-    "last_modified": "2020-07-23T12:01:45+02:00",
-    "input_file": "bertcnn.utf8.md"
-  },
-  {
-    "path": "posts/welcome/",
-    "title": "Welcome to Hertie Data Science Lab Student Projects",
-    "description": "Welcome to our new blog, Hertie Data Science Lab Student Projects. We hope you enjoy \nreading what we have to say!",
-    "author": [
-      {
-        "name": "Allison Koh",
-        "url": "https://example.com/allisonkoh"
-      }
+    "categories": [
+      "Natural Language Processing",
+      "Machine Learning"
     ],
-    "date": "2020-07-20",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2020-07-23T12:02:19+02:00",
-    "input_file": "welcome.utf8.md"
+    "preview": "posts/2020-07-22-bertcnn/figures/desc-major.png",
+    "last_modified": "2020-08-04T12:11:20-04:00",
+    "input_file": {},
+    "preview_width": 604,
+    "preview_height": 384
   }
 ]
