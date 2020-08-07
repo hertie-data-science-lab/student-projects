@@ -3,7 +3,7 @@ title: "Student Projects"
 description: |
 output_dir: "."
 navbar:
-  logo: images/HertieSchool_DSL_RGB.svg
+  logo: images/hertieschool_dsl_rgb.png
   right:
     - text: "Home"
       href: index.html
