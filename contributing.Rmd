@@ -41,7 +41,8 @@ post that includes all required metadata:
 ---
 title: "Some Interesting Title Here"
 description: |
-  Using some fancy deep learning method to do something vaguely interesting that is at least tangentially related to politics/computational social science. 
+  Using some fancy deep learning method to do something vaguely interesting 
+  that is at least tangentially related to politics/computational social science. 
 author:
   - name: Allison Koh 
 date: 07-17-2020

@@ -1319,7 +1319,7 @@
 <p>Articles posted on the Data Science Student Projects website are authored using <a href="https://rstudio.github.io/distill">Distill for R Markdown</a>. The steps required to contribute a new article are as follows:</p>
 <ol type="1">
 <li><p>Create a <a href="http://happygitwithr.com/rstudio-git-github.html">GitHub repository</a> to host your article. We’ll use the repository for feedback and review of the post before it’s published.</p></li>
-<li><p>Create a new <a href="https://rstudio.github.io/distill">distill article</a> and check it into the GitHub repository (be sure to check in the the Rmd source code and the generated HTML files).</p></li>
+<li><p>Create a new <a href="https://rstudio.github.io/distill/basics.html">distill article</a> and check it into the GitHub repository. Make sure to check in the Rmd source code, the generated HTML files, and any additional files or images.</p></li>
 <li><p>Be sure that you’ve included all required <a href="#">article metadata</a>.</p></li>
 <li><p>If your project includes Python code, make sure you have installed and loaded the <a href="https://rstudio.github.io/reticulate/"><code>reticulate</code></a> package for rendering Python code.</p></li>
 <li><p><a href="https://github.com/hertie-data-science-lab/student-projects">Post an issue</a> on the Data Science Student Projects GitHub repo requesting that we accept your article (be sure to include a link back to your article’s GitHub repo!).</p></li>
@@ -1331,7 +1331,8 @@
 ---
 title: &quot;Some Interesting Title Here&quot;
 description: |
-  Using some fancy deep learning method to do something vaguely interesting that is at least tangentially related to politics/computational social science. 
+  Using some fancy deep learning method to do something vaguely interesting 
+  that is at least tangentially related to politics/computational social science. 
 author:
   - name: Allison Koh 
 date: 07-17-2020
@@ -1348,7 +1349,7 @@ output:
 <ol type="1">
 <li><p>You can include multiple authors in the <code>author</code> field, and the field includes an option to include URLs if you would like to add a link to a personal website.</p></li>
 <li><p>In the <code>categories</code> field, list the course(s) you took as a part of your project submission. Courses offered by the data science lab include: <em>Machine Learning</em>, <em>Natural Language Processing</em>, and <em>Python Programming for Data Scientists</em>.</p></li>
-<li><p>If you would like to specify an image to preview your article, add a <code>preview</code> field with the relative file path for the image you would like to include.</p></li>
+<li><p>If you would like to specify an image to preview your article, add a <code>preview</code> field with the relative file path for the image you would like to display If you do not specify a <code>preview</code> image, the default preview image is the first figure that you include in your article.</p></li>
 <li><p>The <code>creative_commons</code> field marks the article as being share-able (all contributed posts must have a <a href="https://creativecommons.org/">Creative Commons</a> license).</p></li>
 <li><p>The <code>repository_url</code> is used to provide links from the article back to GitHub.</p></li>
 </ol>
