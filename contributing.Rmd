@@ -17,9 +17,9 @@ contribute a new article are as follows:
     article. We'll use the repository for feedback and review of the post before
     it's published.
 
-2.  Create a new [distill article](https://rstudio.github.io/distill) and check it
-    into the GitHub repository (be sure to check in the the Rmd source code and
-    the generated HTML files). 
+2.  Create a new [distill article](https://rstudio.github.io/distill/basics.html) and check it
+    into the GitHub repository. Make sure to check in the Rmd source code,
+    the generated HTML files, and any additional files or images. 
 
 3.  Be sure that you've included all required [article metadata](#). 
 
@@ -60,9 +60,9 @@ Please note the following:
 
 1. You can include multiple authors in the `author` field, and the field includes an option to include URLs if you would like to add a link to a personal website. 
 
-2. In the `categories` field, list the course(s) you took as a part of your project submission.
+2. In the `categories` field, list the course(s) you took as a part of your project submission. Courses offered by the data science lab include: *Machine Learning*, *Natural Language Processing*, and *Python Programming for Data Scientists*.
 
-3. If you would like to specify an image to preview your article, add a `preview` field with the relative file path for the image you would like to include. 
+3. If you would like to specify an image to preview your article, add a `preview` field with the relative file path for the image you would like to display If you do not specify a `preview` image, the default preview image is the first figure that you include in your article. 
 
 4. The `creative_commons` field marks the article as being 
 share-able (all contributed posts must have a [Creative Commons](https://creativecommons.org/) license). 
