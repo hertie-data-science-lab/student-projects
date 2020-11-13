@@ -1265,7 +1265,7 @@
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.4/header-attrs.js"></script>
   <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -1339,18 +1339,17 @@
 
 
 <div class="d-article">
-<p>If you are a student at the Hertie School who is interested in sharing your work, please follow the instructions below to contribute an article to this blog.</p>
+<p>If you are a student at the Hertie School who is interested in sharing your project, please follow the instructions below to contribute an article to this blog.</p>
 <p>Articles posted on the Data Science Student Projects website are authored using <a href="https://rstudio.github.io/distill">Distill for R Markdown</a>. The steps required to contribute a new article are as follows:</p>
 <ol type="1">
-<li><p>Create a <a href="http://happygitwithr.com/rstudio-git-github.html">GitHub repository</a> to host your article. We’ll use the repository for feedback and review of the post before it’s published.</p></li>
-<li><p>Create a new <a href="https://rstudio.github.io/distill/basics.html">distill article</a> and check it into the GitHub repository. Make sure to check in the Rmd source code, the generated HTML files, and any additional files or images.</p></li>
-<li><p>Be sure that you’ve included all required <a href="#">article metadata</a>.</p></li>
-<li><p>If your project includes Python code, make sure you have installed and loaded the <a href="https://rstudio.github.io/reticulate/"><code>reticulate</code></a> package for rendering Python code.</p></li>
-<li><p><a href="https://github.com/hertie-data-science-lab/student-projects">Post an issue</a> on the Data Science Student Projects GitHub repo requesting that we accept your article (be sure to include a link back to your article’s GitHub repo!).</p></li>
+<li><p>Fork the <a href="https://github.com/hertie-data-science-lab/distill-template">Distill template repository</a> to host your article. We will use this repository for feedback and review before publishing your article.</p></li>
+<li><p>Replace the <a href="#article-metadata">article metadata</a> fields in the template with information about your article.</p></li>
+<li><p>If your article is based off of a report originally written in LaTeX, <a href="#file-conversion">convert your TeX file to Markdown format</a> and copy/paste text from the body of the converted Markdown file into your article template.</p></li>
+<li><p>Make in-line edits as needed to meet our <a href="#formatting-guidelines">general formatting</a> guidelines, and knit your <code>.Rmd</code> file. Commit and push the final version of the article to your Github repository.</p></li>
+<li><p><a href="https://github.com/hertie-data-science-lab/student-projects">Post an issue</a> on the Data Science Student Projects GitHub repo to submit a request for publishing your article. Please include a link back to your article’s GitHub repo. Once we see your issue, we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p></li>
 </ol>
-<p>Once we see your issue we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p>
 <h3 id="article-metadata">Article metadata</h3>
-<p>Your article should include some standard metadata fields. Here’s an example of a post that includes all required metadata:</p>
+<p>Your article should include some standard metadata fields. Here’s an example of a heading that includes all required metadata:</p>
 <pre class="markup"><code>
 ---
 title: &quot;Some Interesting Title Here&quot;
@@ -1359,26 +1358,48 @@ description: |
   that is at least tangentially related to politics/computational social science. 
 author:
   - name: Allison Koh 
+  - name: Author 2
 date: 07-17-2020
 categories: 
   - Natural Language Processing
   - Machine Learning
+bibliography: bibliography.bib
 creative_commons: CC BY
 repository_url: https://github.com/allisonkoh/project-repo
 output: 
   distill::distill_article:
     self_contained: false
+preview: figures/BERTfig3.png
 ---</code></pre>
 <p>Please note the following:</p>
 <ol type="1">
-<li><p>You can include multiple authors in the <code>author</code> field, and the field includes an option to include URLs if you would like to add a link to a personal website.</p></li>
+<li><p>You can include multiple authors in the <code>author</code> field, and the field includes an option to include URLs if you would like to add a link to your personal website.</p></li>
 <li><p>In the <code>categories</code> field, list the course(s) you took as a part of your project submission. Courses offered by the data science lab include: <em>Machine Learning</em>, <em>Natural Language Processing</em>, and <em>Python Programming for Data Scientists</em>.</p></li>
-<li><p>If you would like to specify an image to preview your article, add a <code>preview</code> field with the relative file path for the image you would like to display If you do not specify a <code>preview</code> image, the default preview image is the first figure that you include in your article.</p></li>
 <li><p>The <code>creative_commons</code> field marks the article as being share-able (all contributed posts must have a <a href="https://creativecommons.org/">Creative Commons</a> license).</p></li>
 <li><p>The <code>repository_url</code> is used to provide links from the article back to GitHub.</p></li>
+<li><p>Select a <code>preview</code> figure that best represents your findings.</p></li>
 </ol>
+<h3 id="file-conversion">Converting TeX files to Markdown</h3>
+<p>If your article is based off of a report originally written in LaTeX, you can use <code>pandoc</code> to convert your article from TeX to Markdown. After converting the document to <code>.md</code> format, copy and paste the text from the body of your converted Markdown document to the article template <code>.Rmd</code> file.</p>
+<p>Guidelines for installing and using <code>pandoc</code> for file conversion can be found here: <a href="https://pandoc.org/getting-started.html" class="uri">https://pandoc.org/getting-started.html</a></p>
+<h3 id="formatting-guidelines">Formatting Guidelines and Recommendations</h3>
+<p>You can use the following list of guidelines for your article to meet general formatting requirements. Please note that in-line edits necessary to publish the final version of an article will vary on a case-by-case basis.</p>
+<ul>
+<li>All section headings start with <strong><code>##</code></strong>, and all sub-headings start with <strong><code>###</code></strong>.</li>
+<li>Citations are formatted correctly<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
+<li>Figures are high-quality in resolution.</li>
+<li>Cross references to figures, tables, and sections are formatted correctly.</li>
+<li>(Most importantly) The <code>.Rmd</code> file knits with no issues.</li>
+</ul>
+<p>In addition to these general guidelines, we also recommend converting tables into figures (full color) when possible.</p>
 <h3 id="questions">Questions?</h3>
-<p>Feel free to direct any questions about submitting your work to <a href="mailto:koh@hertie-school.org">Allison Koh</a>.</p>
+<p>Please feel free to reach out at any point in the process of contributing your article for advice and feedback. You can direct questions about submitting your work to <a href="mailto:koh@hertie-school.org">Allison Koh</a>.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>You might run into issues with bibliography files imported from some citation management programs.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

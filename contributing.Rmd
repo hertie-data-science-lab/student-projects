@@ -6,36 +6,25 @@ title: "Contributing articles"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-If you are a student at the Hertie School who is interested in sharing your work, please follow the instructions below to contribute an article to this blog. 
+If you are a student at the Hertie School who is interested in sharing your project, please follow the instructions below to contribute an article to this blog. 
 
 Articles posted on the Data Science Student Projects website are authored using [Distill for R
 Markdown](https://rstudio.github.io/distill). The steps required to
 contribute a new article are as follows:
 
-1.  Create a [GitHub
-    repository](http://happygitwithr.com/rstudio-git-github.html) to host your
-    article. We'll use the repository for feedback and review of the post before
-    it's published.
+1. Fork the [Distill template repository](https://github.com/hertie-data-science-lab/distill-template) to host your article. We will use this repository for feedback and review before publishing your article. 
 
-2.  Create a new [distill article](https://rstudio.github.io/distill/basics.html) and check it
-    into the GitHub repository. Make sure to check in the Rmd source code,
-    the generated HTML files, and any additional files or images. 
+2. Replace the [article metadata](#article-metadata) fields in the template with information about your article. 
 
-3.  Be sure that you've included all required [article metadata](#). 
+3. If your article is based off of a report originally written in LaTeX, [convert your TeX file to Markdown format](#file-conversion) and copy/paste text from the body of the converted Markdown file into your article template. 
 
-4.  If your project includes Python code, make sure you have installed and loaded the 
-    [`reticulate`](https://rstudio.github.io/reticulate/) package for rendering Python code.
-    
-5.  [Post an issue](https://github.com/hertie-data-science-lab/student-projects) on the
-    Data Science Student Projects GitHub repo requesting that we accept your article (be sure
-    to include a link back to your article's GitHub repo!).
+4. Make in-line edits as needed to meet our [general formatting](#formatting-guidelines) guidelines, and knit your `.Rmd` file. Commit and push the final version of the article to your Github repository. 
 
-Once we see your issue we'll take a look at your article, suggest changes as necessary, then publish it when it's ready.
+5. [Post an issue](https://github.com/hertie-data-science-lab/student-projects) on the Data Science Student Projects GitHub repo to submit a request for publishing your article. Please include a link back to your article's GitHub repo. Once we see your issue, we'll take a look at your article, suggest changes as necessary, then publish it when it's ready.
 
-### Article metadata
+### Article metadata {#article-metadata}
 
-Your article should include some standard metadata fields. Here's an example of a 
-post that includes all required metadata:
+Your article should include some standard metadata fields. Here's an example of a heading that includes all required metadata:
 
 ``` {.markup}
 ---
@@ -45,31 +34,52 @@ description: |
   that is at least tangentially related to politics/computational social science. 
 author:
   - name: Allison Koh 
+  - name: Author 2
 date: 07-17-2020
 categories: 
   - Natural Language Processing
   - Machine Learning
+bibliography: bibliography.bib
 creative_commons: CC BY
 repository_url: https://github.com/allisonkoh/project-repo
 output: 
   distill::distill_article:
     self_contained: false
+preview: figures/BERTfig3.png
 ---
 ```
 
 Please note the following: 
 
-1. You can include multiple authors in the `author` field, and the field includes an option to include URLs if you would like to add a link to a personal website. 
+1. You can include multiple authors in the `author` field, and the field includes an option to include URLs if you would like to add a link to your personal website. 
 
 2. In the `categories` field, list the course(s) you took as a part of your project submission. Courses offered by the data science lab include: *Machine Learning*, *Natural Language Processing*, and *Python Programming for Data Scientists*.
 
-3. If you would like to specify an image to preview your article, add a `preview` field with the relative file path for the image you would like to display If you do not specify a `preview` image, the default preview image is the first figure that you include in your article. 
-
-4. The `creative_commons` field marks the article as being 
+3. The `creative_commons` field marks the article as being 
 share-able (all contributed posts must have a [Creative Commons](https://creativecommons.org/) license). 
 
-5. The `repository_url` is used to provide links from the article back to GitHub.
+4. The `repository_url` is used to provide links from the article back to GitHub.
+
+5. Select a `preview` figure that best represents your findings. 
+
+### Converting TeX files to Markdown {#file-conversion}
+
+If your article is based off of a report originally written in LaTeX, you can use `pandoc` to convert your article from TeX to Markdown. After converting the document to `.md` format, copy and paste the text from the body of your converted Markdown document to the article template `.Rmd` file.
+
+Guidelines for installing and using `pandoc` for file conversion can be found here: https://pandoc.org/getting-started.html
+
+### Formatting Guidelines and Recommendations {#formatting-guidelines}
+
+You can use the following list of guidelines for your article to meet general formatting requirements. Please note that in-line edits necessary to publish the final version of an article will vary on a case-by-case basis.
+
+- All section headings start with __`##`__, and all sub-headings start with __`###`__.
+- Citations are formatted correctly^[You might run into issues with bibliography files imported from some citation management programs.].
+- Figures are high-quality in resolution. 
+- Cross references to figures, tables, and sections are formatted correctly.
+- (Most importantly) The `.Rmd` file knits with no issues. 
+
+In addition to these general guidelines, we also recommend converting tables into figures (full color) when possible.
 
 ### Questions? 
 
-Feel free to direct any questions about submitting your work to [Allison Koh](mailto:koh@hertie-school.org). 
+Please feel free to reach out at any point in the process of contributing your article for advice and feedback. You can direct questions about submitting your work to [Allison Koh](mailto:koh@hertie-school.org). 
