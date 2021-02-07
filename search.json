@@ -2,11 +2,10 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this blog",
-      "description": "Some additional details about the blog",
+      "title": "About this site",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-02-06T19:28:55-05:00"
+      "contents": "\nAbout the Hertie School Data Science Lab\nThe Hertie School Data Science Lab is a research and training hub that tackles societal challenges with computational and data-intensive methods. Our mission is to foster, advance and promote excellence in data science research, education and application to enable better decision-making for the common good.\nOver the next decade, data science is expected to have a significant impact across all sectors of the economy and society through automation and personalization of services. The Hertie School Data Science Lab will leverage and amplify breakthroughs in data science and artificial intelligence (AI) to tackle major societal problems.\nAbout the Student Projects Showcase\nThe primary aim of final projects from the lab’s course offerings is to provide students with an opportunity to gain hands-on experience developing research projects in data science and applied machine learning.\nMore information on the lab’s course offerings can be found here: https://www.hertie-school.org/en/datasciencelab/teaching-services\n\n\n\n",
+      "last_modified": "2021-02-06T23:55:18-05:00"
     },
     {
       "path": "contributing.html",
