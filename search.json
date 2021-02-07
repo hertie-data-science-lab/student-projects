@@ -1,0 +1,27 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-02-06T19:28:55-05:00"
+    },
+    {
+      "path": "contributing.html",
+      "title": "Contributing articles",
+      "author": [],
+      "contents": "\nIf you are a student at the Hertie School who is interested in sharing your project, please follow the instructions below to contribute an article to this blog.\nArticles posted on the Data Science Student Projects website are authored using Distill for R Markdown. The steps required to contribute a new article are as follows:\nFork the Distill template repository to host your article. We will use this repository for feedback and review before publishing your article.\nReplace the article metadata fields in the template with information about your article.\nIf your article is based off of a report originally written in LaTeX, convert your TeX file to Markdown format and copy/paste text from the body of the converted Markdown file into your article template.\nMake in-line edits as needed to meet our general formatting guidelines, and knit your .Rmd file. Commit and push the final version of the article to your Github repository.\nPost an issue on the Data Science Student Projects GitHub repo to submit a request for publishing your article. Please include a link back to your article’s GitHub repo. Once we see your issue, we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.\nArticle metadata\nYour article should include some standard metadata fields. Here’s an example of a heading that includes all required metadata:\n---\ntitle: \"Some Interesting Title Here\"\ndescription: |\n  Using some fancy deep learning method to do something vaguely interesting \n  that is at least tangentially related to politics/computational social science. \nauthor:\n  - name: Allison Koh \n  - name: Author 2\ndate: 07-17-2020\ncategories: \n  - Natural Language Processing\n  - Machine Learning\nbibliography: bibliography.bib\ncreative_commons: CC BY\nrepository_url: https://github.com/allisonkoh/project-repo\noutput: \n  distill::distill_article:\n    self_contained: false\npreview: figures/BERTfig3.png\n---\nPlease note the following:\nYou can include multiple authors in the author field, and the field includes an option to include URLs if you would like to add a link to your personal website.\nIn the categories field, list the course(s) you took as a part of your project submission. Courses offered by the data science lab include: Machine Learning, Natural Language Processing, and Python Programming for Data Scientists.\nThe creative_commons field marks the article as being share-able (all contributed posts must have a Creative Commons license).\nThe repository_url is used to provide links from the article back to GitHub.\nSelect a preview figure that best represents your findings.\nConverting TeX files to Markdown\nIf your article is based off of a report originally written in LaTeX, you can use pandoc to convert your article from TeX to Markdown. After converting the document to .md format, copy and paste the text from the body of your converted Markdown document to the article template .Rmd file.\nGuidelines for installing and using pandoc for file conversion can be found here: https://pandoc.org/getting-started.html\nFormatting Guidelines and Recommendations\nYou can use the following list of guidelines for your article to meet general formatting requirements. Please note that in-line edits necessary to publish the final version of an article will vary on a case-by-case basis.\nAll section headings start with ##, and all sub-headings start with ###.\nCitations are formatted correctly1.\nFigures are high-quality in resolution.\nCross references to figures, tables, and sections are formatted correctly.\n(Most importantly) The .Rmd file knits with no issues.\nIn addition to these general guidelines, we also recommend converting tables into figures (full color) when possible.\nQuestions?\nPlease feel free to reach out at any point in the process of contributing your article for advice and feedback. You can direct questions about submitting your work to Allison Koh.\n\nYou might run into issues with bibliography files imported from some citation management programs.↩︎\n",
+      "last_modified": "2021-02-06T19:28:56-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Data Science Student Projects @ Hertie",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-02-06T19:28:56-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

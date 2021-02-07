@@ -10,13 +10,14 @@ categories:
   - Natural Language Processing 
   - Machine Learning
 date: 07-23-2020
-preview: 
 bibliography: bibliography.bib
 output:
   distill::distill_article:
     self_contained: false
 preview: figures/BERTfig3.png
 ---
+^[]
+[]()
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
