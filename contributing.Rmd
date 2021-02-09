@@ -75,7 +75,7 @@ Before file conversion, make sure you have the following documents in the same r
 - Figures folder (**NOTE: Make sure figures are saved as `*.png` files.**)
 - Any other cross-referenced materials  
 
-After compiling your article repo and ensuring you have the latest versions of `{rmarkdown}` and `{knitr}`, use the `rmarkdown::pandoc_convert()` function to convert your TeX file to Markdown (`*.md`) format. The code you run should look something like this: 
+After compiling your article repo and ensuring you have the latest versions of `{rmarkdown}` and `{knitr}`, use the `rmarkdown::pandoc_convert()` function to convert your TeX file to Markdown (`*.md`) format. The code you run should look like this: 
 
 ```{r convert-tex-md, echo = TRUE, eval = FALSE}
 rmarkdown::pandoc_convert(
