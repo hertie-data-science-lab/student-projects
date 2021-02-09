@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 If you are a student at the Hertie School who is interested in sharing your project, please follow the instructions below to contribute an article to this blog. 
 
+### General Instructions {#instructions}
+
 Articles posted on the Data Science Student Projects website are authored using [Distill for R
 Markdown](https://rstudio.github.io/distill). The steps required to
 contribute a new article are as follows:
@@ -16,7 +18,7 @@ contribute a new article are as follows:
 
 2. Replace the [article metadata](#article-metadata) fields in the template with information about your article. 
 
-3. If your article is based off of a report originally written in LaTeX, [convert your TeX file to Markdown format](#file-conversion) and copy/paste text from the body of the converted Markdown file into your article template. 
+3. If your article is based off of a report originally written in LaTeX, [convert your TeX file to Markdown format](#file-conversion) and copy/paste text from the body of the converted Markdown file into your article template. {#after-conversion}
 
 4. Make in-line edits as needed to meet our [general formatting](#formatting-guidelines) guidelines, and knit your `.Rmd` file. Commit and push the final version of the article to your Github repository. 
 
@@ -64,16 +66,35 @@ share-able (all contributed posts must have a [Creative Commons](https://creativ
 
 ### Converting TeX files to Markdown {#file-conversion}
 
-If your article is based off of a report originally written in LaTeX, you can use `pandoc` to convert your article from TeX to Markdown. After converting the document to `.md` format, copy and paste the text from the body of your converted Markdown document to the article template `.Rmd` file.
+If your article is based off of a report originally written in LaTeX, you can use `pandoc` to convert your article to the Markdown (`*.md`) format required  We recommend using the `{rmarkdown}` package in `R` for file conversion. 
 
-Guidelines for installing and using `pandoc` for file conversion can be found here: https://pandoc.org/getting-started.html
+Before file conversion, make sure you have the following documents in the same repository: 
+
+- LaTeX (`*.tex`) file 
+- Bibliography (`*.bib`) file
+- Figures folder (**NOTE: Make sure figures are saved as `*.png` files.**)
+- Any other cross-referenced materials  
+
+After compiling your article repo and ensuring you have the latest versions of `{rmarkdown}` and `{knitr}`, use the `rmarkdown::pandoc_convert()` function to convert your TeX file to Markdown (`*.md`) format. The code you run should look something like this: 
+
+```{r convert-tex-md, echo = TRUE, eval = FALSE}
+rmarkdown::pandoc_convert(
+  "bertcnn-classifying-manifestos.tex", 
+  to = "markdown", 
+  output = "bertcnn-classifying-manifestos.md", 
+  citeproc = TRUE
+)
+```
+
+Once your `*.md` file has compiled, continue on from Step 3 in the [instructions](#instructions) above. 
+<!-- Guidelines for installing and using `pandoc` for file conversion can be found here: https://pandoc.org/getting-started.html -->
 
 ### Formatting Guidelines and Recommendations {#formatting-guidelines}
 
 You can use the following list of guidelines for your article to meet general formatting requirements. Please note that in-line edits necessary to publish the final version of an article will vary on a case-by-case basis.
 
 - All section headings start with __`##`__, and all sub-headings start with __`###`__.
-- Citations are formatted correctly^[You might run into issues with bibliography files imported from some citation management programs.].
+- Citations are formatted correctly^[You might run into issues with bibliography files imported from some citation management programs (i.e. Mendeley).].
 - Figures are high-quality in resolution. 
 - Cross references to figures, tables, and sections are formatted correctly.
 - (Most importantly) The `.Rmd` file knits with no issues. 

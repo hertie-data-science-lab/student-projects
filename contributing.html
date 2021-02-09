@@ -2001,7 +2001,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.6.6/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
   <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -2079,11 +2079,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <p>If you are a student at the Hertie School who is interested in sharing your project, please follow the instructions below to contribute an article to this blog.</p>
+<h3 id="instructions">General Instructions</h3>
 <p>Articles posted on the Data Science Student Projects website are authored using <a href="https://rstudio.github.io/distill">Distill for R Markdown</a>. The steps required to contribute a new article are as follows:</p>
 <ol type="1">
 <li><p>Fork the <a href="https://github.com/hertie-data-science-lab/distill-template">Distill template repository</a> to host your article. We will use this repository for feedback and review before publishing your article.</p></li>
 <li><p>Replace the <a href="#article-metadata">article metadata</a> fields in the template with information about your article.</p></li>
-<li><p>If your article is based off of a report originally written in LaTeX, <a href="#file-conversion">convert your TeX file to Markdown format</a> and copy/paste text from the body of the converted Markdown file into your article template.</p></li>
+<li><p>If your article is based off of a report originally written in LaTeX, <a href="#file-conversion">convert your TeX file to Markdown format</a> and copy/paste text from the body of the converted Markdown file into your article template. {#after-conversion}</p></li>
 <li><p>Make in-line edits as needed to meet our <a href="#formatting-guidelines">general formatting</a> guidelines, and knit your <code>.Rmd</code> file. Commit and push the final version of the article to your Github repository.</p></li>
 <li><p><a href="https://github.com/hertie-data-science-lab/student-projects">Post an issue</a> on the Data Science Student Projects GitHub repo to submit a request for publishing your article. Please include a link back to your article’s GitHub repo. Once we see your issue, we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p></li>
 </ol>
@@ -2118,8 +2119,27 @@ preview: figures/BERTfig3.png
 <li><p>Select a <code>preview</code> figure that best represents your findings.</p></li>
 </ol>
 <h3 id="file-conversion">Converting TeX files to Markdown</h3>
-<p>If your article is based off of a report originally written in LaTeX, you can use <code>pandoc</code> to convert your article from TeX to Markdown. After converting the document to <code>.md</code> format, copy and paste the text from the body of your converted Markdown document to the article template <code>.Rmd</code> file.</p>
-<p>Guidelines for installing and using <code>pandoc</code> for file conversion can be found here: <a href="https://pandoc.org/getting-started.html" class="uri">https://pandoc.org/getting-started.html</a></p>
+<p>If your article is based off of a report originally written in LaTeX, you can use <code>pandoc</code> to convert your article to the Markdown (<code>*.md</code>) format required We recommend using the <code>{rmarkdown}</code> package in <code>R</code> for file conversion.</p>
+<p>Before file conversion, make sure you have the following documents in the same repository:</p>
+<ul>
+<li>LaTeX (<code>*.tex</code>) file</li>
+<li>Bibliography (<code>*.bib</code>) file</li>
+<li>Figures folder (<strong>NOTE: Make sure figures are saved as <code>*.png</code> files.</strong>)</li>
+<li>Any other cross-referenced materials</li>
+</ul>
+<p>After compiling your article repo and ensuring you have the latest versions of <code>{rmarkdown}</code> and <code>{knitr}</code>, use the <code>rmarkdown::pandoc_convert()</code> function to convert your TeX file to Markdown (<code>*.md</code>) format. The code you run should look something like this:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'>rmarkdown</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rmarkdown/man/pandoc_convert.html'>pandoc_convert</a></span><span class='op'>(</span>
+  <span class='st'>"bertcnn-classifying-manifestos.tex"</span>, 
+  to <span class='op'>=</span> <span class='st'>"markdown"</span>, 
+  output <span class='op'>=</span> <span class='st'>"bertcnn-classifying-manifestos.md"</span>, 
+  citeproc <span class='op'>=</span> <span class='cn'>TRUE</span>
+<span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Once your <code>*.md</code> file has compiled, continue on from Step 3 in the <a href="#instructions">instructions</a> above. <!-- Guidelines for installing and using `pandoc` for file conversion can be found here: https://pandoc.org/getting-started.html --></p>
 <h3 id="formatting-guidelines">Formatting Guidelines and Recommendations</h3>
 <p>You can use the following list of guidelines for your article to meet general formatting requirements. Please note that in-line edits necessary to publish the final version of an article will vary on a case-by-case basis.</p>
 <ul>
@@ -2136,7 +2156,7 @@ preview: figures/BERTfig3.png
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>You might run into issues with bibliography files imported from some citation management programs.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>You might run into issues with bibliography files imported from some citation management programs (i.e. Mendeley).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->
