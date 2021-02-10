@@ -18,7 +18,7 @@ contribute a new article are as follows:
 
 2. Replace the [article metadata](#article-metadata) fields in the template with information about your article. 
 
-3. If your article is based off of a report originally written in LaTeX, [convert your TeX file to Markdown format](#file-conversion) and copy/paste text from the body of the converted Markdown file into your article template. {#after-conversion}
+3. If your article is based off of a report originally written in LaTeX, [convert your TeX file to Markdown format](#file-conversion) and copy/paste text from the body of the converted Markdown file into your article template. 
 
 4. Make in-line edits as needed to meet our [general formatting](#formatting-guidelines) guidelines, and knit your `.Rmd` file. Commit and push the final version of the article to your Github repository. 
 
